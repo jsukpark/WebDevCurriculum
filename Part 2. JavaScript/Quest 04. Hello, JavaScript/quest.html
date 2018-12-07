@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            function printRow(idx, nRows) {
+                var spaces = " ".repeat(nRows - idx);
+                console.log(spaces + "*".repeat(idx + idx - 1) + spaces);
+            }
+
+            var userInput = prompt("Enter the number of rows:");
+            while (Number.isNaN(Number(userInput))) {
+                userInput = prompt("That is not a valid number of rows.\nPlease enter the number of rows:");
+            }
+
+            var numRows = Number(userInput);
+
+            for (let i = 1; i <= numRows; i++) {
+                printRow(i, numRows);
+            }            
+        </script>
+    </body>
+</html>
